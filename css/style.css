@@ -1,0 +1,642 @@
+
+
+:root{
+    --dark-voilet : hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --ancor : rgb(212, 207, 207);
+}
+/* dark mode */
+.dark_mode{
+     --dark-voilet : hsl(256, 26%, 20%); 
+    --dark-voilet : hsl(240, 1%, 34%);
+    --grayish-blue: hsl(216, 51%, 61%);
+    --Very-Dark-Violet: hsl(0, 0%, 5%);
+    --Dark-Grayish-Violet: hsl(0, 33%, 96%);
+    --Very-Light-Gray: hsl(0, 100%, 99%);
+    --ancor : rgb(255, 255, 255);
+    --bg-clr: #fff;
+    --bg-clr2: #000;
+    --navbar-clr: rgb(202, 202, 202);
+} 
+/* Global  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--bg-clr2);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'DM Serif Display', serif;
+}
+
+
+/* mode change */
+.changeMode{
+    width: 35px;
+    height: 35px;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moon,.sun{
+    font-size: 25px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+/* navbar start */
+nav{
+    padding: 2rem 1rem;
+    
+}
+.navbar-dark{
+    background: var(--navbar-clr);
+}
+.navbar-desktop{
+    display: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background: blue; */
+}
+.hamburger-icon{
+    display: flex;
+    /* background: blueviolet; */
+    align-items: center;
+    justify-content: flex-end;
+}
+.hamburger{
+    width: 32px;
+    height: 32px;
+}
+.open-icon{
+    display: none;
+}
+.close-icon{
+    display: none;
+}
+.menu{
+    background: var(--Very-Dark-Violet);
+    height: calc(100vh - 6rem);
+    padding: 0 0;
+    overflow: hidden;
+    display: none;
+}
+.menuShow{
+    display: block;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    list-style-type: none;
+    padding: 2.5rem 0.5rem 0 0.5rem;
+    margin-bottom: 3.5rem;
+}
+.menu ul li{
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    width: 75%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.menu ul li:last-child{
+    border: 2px solid var(--Very-Light-Gray);
+}
+.menu ul li:hover{
+    border: 2px solid var(--Very-Light-Gray);
+}
+.menu ul li a{
+    text-decoration: none;
+    color: var(--Very-Light-Gray);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.menu img{
+    margin-top: 1rem;
+    /* width: 100% */
+    transform: rotate(180deg);
+}
+/* navbar end */
+
+
+/* hero section start */
+.hero-desktop{
+    display: none;
+}
+.myBtn{
+    padding: 0.5rem 1.2rem;
+    border: 2px solid var(--Very-Light-Gray);
+    background: transparent;
+    color: var(--Very-Light-Gray);
+}
+.hero-section .hero-img{
+    width: 100%;
+    height: calc(100vh - 6rem);
+}
+.no-padding{
+    padding: 0%;
+}
+.hero-section .hero-img img{
+    width: 100%;
+    height: 100%;
+}
+.hero-content{
+    background:  var(--dark-voilet);
+    height: calc(100vh - 4.5rem);
+    padding: 6rem 1.5rem;
+    position: relative;
+}
+.hero-content::before{
+    content: url('../images/bg-pattern-intro-left-mobile.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero-content::after{
+    content: url('../images/bg-pattern-intro-right-mobile.svg');
+    position: absolute;
+    bottom: -46%;
+    right: 0;
+}
+.hero-content h1{
+    /* color: #fff; */
+    color: var(--Very-Light-Gray);
+    font-weight: 700;
+    font-size: 2.9rem;
+    text-align: center;
+}
+.hero-content p{
+    color: var(--Dark-Grayish-Violet);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+}
+.view-plan{
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.hero-content a{
+    color: var(--ancor);
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* hero section end */
+
+
+
+/* we are different start */
+.whyDifferent{
+    padding-top: 10rem;
+}
+.whyDifferent h2{
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 4rem;
+    color: var(--bg-clr);
+}
+.whyDifferent h2::before{
+    position: absolute;
+    content: '';
+    top: -2rem;
+    left: 30%;
+    width: 40%;
+    height: 0.5px;
+    background: var(--Dark-Grayish-Violet);
+}
+.why_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.why_card .img-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.why_card h3{
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--bg-clr);
+}
+.why_card p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--Dark-Grayish-Violet);
+    font-weight: 600;
+}
+/* we are different end */
+
+
+/* how we work start */
+.how_we_work{
+    margin-top: 5rem;
+    padding: 0 1.2rem;
+    margin-bottom: 9rem;
+}
+.howWeWorkbg{
+    background: var(--dark-voilet);
+    height: 65vh;
+    color: var(--Very-Light-Gray);
+    padding: 3.5rem 1rem;
+    position: relative;
+}
+.howWeWorkbg::after{
+    position: absolute;
+    content: url('../images/bg-pattern-how-we-work-mobile.svg');
+    top: 0;
+    right: 0;
+}
+.howWeWorkbg h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--bg-clr);
+}
+.howWeWorkbg .about_us_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.howWeWorkbg .about_us_btn a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* how we work end */
+
+
+/* insure start */
+.insure{
+    margin-bottom: 5rem;
+    height: 40vh;
+    position: relative;
+}
+.insure .row{
+    padding-top: 8rem;
+}
+.insure::before{
+    position: absolute;
+    content: url('../images/bg-pattern-mobile-nav.svg');
+    transform: rotate(180deg);
+    top: 0;
+    left: 0%;
+}
+.insure::after{
+    position: absolute;
+    content: '';
+    bottom: -3rem;
+    left: 8%;
+    width: 84%;
+    height: 1px;
+    background:var(--Dark-Grayish-Violet);
+}
+.insure .img-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.insure .icons-box{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.insure .icons-box .icon{
+    margin-left: 1rem;
+}
+/* insure end */
+
+
+/* footer section start */
+.footer{
+    text-align: center;
+}
+.footer p{
+    color: var(--Dark-Grayish-Violet);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--dark-voilet);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.footer .link-groups{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.footer .link-groups a{
+    margin-bottom: 1rem;
+}
+/* footer section end */
+
+/*  */
+@media screen and (max-width: 1440px) and (min-width: 769px)
+{
+    .changeMode{
+        display: none;
+    }
+    /* navbar start */
+    .hamburger-icon{
+        display: none;
+    }
+    .navbar-desktop{
+        z-index: 88;
+        display: block;
+    }
+    .clr{
+        color: var(--grayish-blue);
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    .clr:hover{
+        color: var(--Very-Dark-Violet) !important;
+    }
+    .active{
+        color: var(--Very-Dark-Violet);
+        font-size: 1.1rem;
+        border: 2px solid var(--Very-Dark-Violet);
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .active:hover{
+        color: var(--Very-Light-Gray);
+        background: var(--Very-Dark-Violet);
+    }
+    .navbar-desktop{
+        /* background: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .navbar-desktop ul{
+        list-style-type: none;
+        display: flex;
+        /* background: red; */
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-desktop ul li a{
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    /* navbar end */
+
+    /* home start */
+    .hero-section{
+        display: none;
+    }
+    .hero-desktop{
+        background: var(--dark-voilet);
+        height: calc(100vh - 4.5rem);
+        display: block;
+        position: relative;
+    }
+    .hero-desktop::before{
+        position: absolute;
+        content: url('../images/bg-pattern-intro-left-desktop.svg');
+        bottom: -60%;
+        left: 0;
+    }
+    .hero-desktop::after{
+        position: absolute;
+        content: url('../images/image-intro-desktop.jpg');
+        top: 17%;
+        right: 14%;
+    }
+    .hero-content-desktop{
+        display: flex;
+        flex-direction: column;
+        padding: 8rem 5.5rem 0rem 5.5rem;
+        position: relative;
+    }
+    .hero-content-desktop::after{
+        content: url('../images/bg-pattern-intro-right-desktop.svg');
+        position: absolute;
+        top: -21%;
+        right: -100%;
+        
+    }
+    .hero-content-desktop h1{
+        color: var(--Very-Light-Gray);
+        font-size: 4rem;
+        font-weight: 700;
+        position: relative;
+    }
+    .hero-content-desktop h1::before{
+        content: '';
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        width: 25%;
+        height: 0.5px;
+        background: var(--Dark-Grayish-Violet);
+    }
+
+    .hero-content-desktop p{
+        color: var(--Dark-Grayish-Violet);
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: 0.5rem;
+    }
+    .hero-content-desktop a{
+        color: var(--ancor);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .hero-content-desktop a:hover{
+        background: var(--Very-Light-Gray);
+        color: var(--Very-Dark-Violet);
+    }
+    .view-plan-desktop{
+        padding-top: 0.5rem;
+        display: flex;
+    }
+    /* home end */
+    
+    /* why we are different start */
+    .whyDifferent{
+        margin-top: 23rem;
+        padding: 0 5.5rem 0 5.5rem;
+    }
+    .whyDifferent h2{
+        font-size: 3.5rem;
+        text-align: start;
+        position: relative;
+    }
+    .whyDifferent h2::before{
+        position: absolute;
+        content: '';
+        top: -3rem;
+        left: 1%;
+        width: 10%;
+        height: 0.5px;
+        background: var(--Dark-Grayish-Violet);
+    }
+    .why_card{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0%;
+        /* padding: 0 7rem 0 0; */
+    }
+    .why_card .img-box{
+        display: block;
+        width: 100%;
+    }
+    .why_card h3{
+        margin: 2rem 0 1rem 0;
+        text-align: start;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .why_card p{
+        text-align: start;
+        font-size: 1rem;
+        color: var(--Dark-Grayish-Violet);
+        font-weight: 600;
+    }
+    /* why we are different end */
+
+    /* find out more section start */
+    .how_we_work{
+        margin-top: 8rem;
+        padding: 0 5.5rem 0 5.5rem;
+    }
+    .howWeWorkbg{
+        height: 42vh;
+        position: relative;
+        padding: 4.2rem 4rem;
+    }
+    .howWeWorkbg::after{
+        position: absolute;
+        content: url('../images/bg-pattern-how-we-work-desktop.svg');
+    }
+    .howWeWorkbg h2{
+        font-size: 3.1rem;
+        text-align: start;
+    }
+    .howWeWorkbg h2 span{
+        display: block;
+    }
+    .howWeWorkbg .about_us_btn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+       
+    }
+    .howWeWorkbg .about_us_btn a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.4rem 1.1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 2rem;
+        z-index: 200;
+        transition: all 0.3s ease;
+    }
+    .howWeWorkbg .about_us_btn a:hover{
+        color: var(--Very-Dark-Violet);
+        background: var(--Very-Light-Gray);
+    }
+    /* find out more section end */
+
+    /* insure start */
+    .insure{
+        margin-bottom: 0%;
+        height: 40vh;
+        padding: 0 5.5rem 0 5.5rem;
+    }
+    .insure::before{
+        position: absolute;
+        content: url('../imaes/bg-pattern-mobile-nav.svg');
+        transform: rotate(180deg);
+        top: 0;
+        left: 0%;
+    }
+    .insure::after{
+        position: absolute;
+        content: '';
+        bottom: 3rem;
+        left: 6%;
+        width: 88%;
+        height: 0.5px;
+        background:var(--Dark-Grayish-Violet);
+    }
+    .insure .img-box{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .insure .icons-box{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .insure .icons-box img{
+        /* background-color: var(--Very-Dark-Violet); */
+        cursor: pointer;
+    }
+    /* insure end */
+
+    /* footer section start */
+    .footer{
+        text-align: start;
+        padding: 0 1.9rem 0 1.9rem;
+    }
+    .footer a{
+        text-decoration: none;
+        color: var(--dark-voilet);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+    /* footer section end */
+
+}
